@@ -54,3 +54,7 @@ Adicionando mais polices a role do IAM pra comunicação com outros serviços, t
 
 <img src="img/Adicionando polices a role ssm testando e vendo aplicação rodar.gif">
 
+-------
+## Autor
+
+Glaucia Castro - glauciacastro.dev@gmail.com
