@@ -2,9 +2,9 @@
 
 ***Detalhes do evento:*** Período: 05 a 11 de Agosto/2024 (Online e ao Vivo às 20h) [>> Página de Inscrição do evento](https://org.imersaoaws.com.br/github/readme)
 
-Participei do evento e entreguei os desafios mostrados e detalhados aqui.
+Evento online mnistrado pelo Henrylle Maia. Participei do evento e entreguei os 4 desafios propostos e detalhados aqui.
 
-###
+
 ----
 # Pré-requisitos
 
@@ -27,6 +27,15 @@ cd /bia
 # Para subir os containers da aplicação e do banco de dados:
 docker compose up -d
 
+# Dê permissão de execução aos scripts que for usar:
+chmod +x nome-do-script.sh
+
+# Pode ser necessário editar alguns scripts antes de executa-los. Para executar os scripts:
+bash nome-do-script.sh:  
+
+# Para parar os containers:
+docker compose dowm
+
 # Para rodar as migrations do BD no container 
 docker compose exec server bash -c 'npx sequelize db:migrate'
 ```
@@ -35,7 +44,7 @@ docker compose exec server bash -c 'npx sequelize db:migrate'
 
 Os projetos práticos detalhados a seguir podem gerar custos pelo uso de alguns dos serviços AWS!
 
-É necessário entender sobre AWS, pois, nem todos os serviços usados nestes projetos estão na camada free tier (nível gratuito) e muitos fatores podem interferir no custo total por exemplo: o tempo de cadastro da sua conta, os limites de uso dos serviços já feitos, o tempo que a aplicação vai ficar no ar e os serviços vão ficar ligados, entre outros. No meu caso o projeto teve um custo de menos de U$$ 2,00 (dois dólares) com a aplicação ficando no ar por 6 dias ( cerca de 144 horas) tendo minha conta tem menos de 12 meses.
+É necessário entender sobre AWS, pois, nem todos os serviços usados nestes projetos estão na camada free tier (nível gratuito) e muitos fatores podem interferir no custo total por exemplo: o tempo de cadastro da sua conta, os limites de uso dos serviços já feitos, o tempo que a aplicação vai ficar no ar e os serviços vão ficar ligados, entre outros. No meu caso o projeto teve um custo de menos de U$$ 2,00 (dois dólares) com a aplicação ficando no ar por 6 dias ( cerca de 144 horas) tendo a conta que usei menos de 12 meses de podendo aproveitar as ofertas free tier de alguns seerviços.
 
 ------
 
@@ -91,6 +100,8 @@ Nesse segundo desafio tivemos como tarefa a criar um cluster no ECS, o principal
 Alocamos também um banco no RDS, rodamos as migrates para criar a estrutura relacional, configuramos os security groups e começamos o desmembramento da nossa aplicação dentro da nuvem.    
 
 Aprendi também a fazer o envio da nossa imagem Docker para o ECR e fazer deploy via script para o ECS.
+
+Abaixo alguns vídeos com as etapas que cumpri desse segundo desafio:
 
 ---------
 ### Passo 1:
@@ -161,6 +172,8 @@ Trabalhei também com Application Load Balancer e Target Group.
 
 Para fechar com chave de ouro, colocamos nossa aplicação para rodar com domínio personalizado e https configurado.
 
+Abaixo alguns vídeos com as etapas que cumpri desse terceiro desafio:
+
 --------
 ### Passo 1:
 
@@ -202,11 +215,33 @@ Para fechar com chave de ouro, colocamos nossa aplicação para rodar com domín
 
 -------
 
-# 4º Projeto prático: Configurando deploy sem downtime, trabalhando com Load Balancer e inserindo a app em um dominio https personalizado
+# 4º Projeto prático: Simulando cenário Black-Friday com Auto Scalling agendado, e analisando custos de uso após 6 dias de app no ar
 
-...
+Nesse último desafio a tarefa foi simular um cenário de Black Friday configurando Auto-Scaling agendado pra nossa app bia com alta disponibilidade e escalabilidade. 
 
+Configuramos para que o aumento a capacidade computacional em picos de acesso ocorra automaticamente.
 
+Pra finalizar minha trilha explorei um pouco a parte de Bills (faturas) mostrando destalhes dos custos do projeto todo, que ficou no ar por 6 dias inteiros.
+
+Abaixo alguns vídeos com as etapas que cumpri desse quarto desafio:
+
+--------
+### Passo 1:
+
+Simulando cenário Black-Friday:
+
+- Mostrnado estrutura atual redefinindo services pra escalar, configurando Auto Scaling agendado e rodando teste
+
+<img src="img/Projeto4/1-Simulando cenário de Black Friday com AutoScaling agendado.gif">
+
+--------
+### Passo 2:
+
+- Acessando bills (faturas) no gerenciador de custos AWS e mostrndo custos do lab:
+
+<img src="img/Projeto4/2-Analisando os custos do lab.gif">
+
+-------
 
 ## Autor
 
